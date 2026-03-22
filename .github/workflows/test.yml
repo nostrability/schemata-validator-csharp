@@ -1,0 +1,14 @@
+name: Test
+on:
+  push: { branches: [main] }
+  pull_request: { branches: [main] }
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git clone https://github.com/nostrability/schemata-csharp.git ../schemata-csharp
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: '8.0' }
+      - run: dotnet build
+      - run: dotnet test

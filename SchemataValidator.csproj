@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Nostrability.Schemata.Validator</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="JsonSchema.Net" Version="7.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../schemata-csharp/Schemata.csproj" />
+  </ItemGroup>
+</Project>
